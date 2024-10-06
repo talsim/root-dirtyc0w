@@ -1,4 +1,4 @@
-# root-dirtyc0w
+# root-dirtyc0w (CVE-2016-5195)
 ### DirtyCow root privilege escalation
 Dirty COW was a race-condition vulnerability in the Linux kernel. This vulnerability lived inside the kernel functions which handle the copy-on-write (COW) feature of memory mappings and when exploited allowed processes to write to read-only files.  
 
