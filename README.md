@@ -10,5 +10,5 @@ You can find more executables in Linux that have the SUID bit set and change the
   <div style="border: 1.5px solid #ccc; display: inline-block; padding: 4px;">
     <img src="/assets/gif/root-dirtyc0w.gif" alt="root-dirtyc0w PoC GIF" style="display: block; border: none;">
   </div>
-  <p style="margin-top: 5px;"><em>Privilege Escalation PoC: Exploiting Dirty COW for Root Access (CVE-2016-5195)</em></p>
+  <p style="margin-top: 5px;"><em>Privilege Escalation PoC: Exploiting Dirty COW for Root Access (CVE-2016-5195) - Ran on Kali Linux 2016.2</em></p>
 </div>
